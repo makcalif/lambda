@@ -9,11 +9,19 @@ import java.util.function.Function;
  */
 public class AssetUtil {
 
-    Function<String, BigDecimal> StockService;
+    Function<String, BigDecimal> stockService;
+
+    public AssetUtil(Function<String, BigDecimal> stockService) {
+        this.stockService = stockService;
+    }
+
+    public BigDecimal getStockPrice(String ticker, final int shares) {
+        return stockService.apply(ticker).multiply(BigDecimal.valueOf(shares));
+    }
 
     public static Long calculateNetAssetValue(List<Asset> assetList) {
         return assetList.stream()
-                .mapToLong(asset -> asset.getValue())
+               .mapToLong(asset -> asset.getValue())
                 .sum();
     }
 }
