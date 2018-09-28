@@ -5,7 +5,7 @@ package com.functional.design.assets;
  */
 public class Asset {
 
-    public enum Type {BOND, STOCKS};
+    public enum Type {BOND, STOCK};
     private Long value;
     private Type type;
 
