@@ -1,4 +1,4 @@
-package com.com.basic.loop;
+package com.basic.loop;
 
 import java.util.Comparator;
 import java.util.Map;
