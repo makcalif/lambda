@@ -4,6 +4,7 @@ import com.map.util.MapUtil;
 
 import java.util.Comparator;
 import java.util.Map;
+import java.util.function.Function;
 
 /**
  * Created by x239954 on 10/3/2018.
@@ -14,11 +15,13 @@ public class MapFilterAndSort {
         Map<String, Integer> map = MapUtil.get_String_Integer_Map();
         // sum of top two values
 
-        map.values().stream()
-                .mapToInt(t -> )
-                .sorted(Comparator.<Integer>reverseOrder())
-                .limit(2)
-                .sum();
+        Integer sumTopTwo = map.values().stream()
+                .sorted( Comparator.reverseOrder())
+                   .limit(2)
+                   .mapToInt( e -> e.intValue())
+                   .sum();
+
+
 
 
     }
