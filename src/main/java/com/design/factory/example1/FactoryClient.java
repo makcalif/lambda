@@ -1,7 +1,5 @@
-package com.design.factory;
+package com.design.factory.example1;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.function.Supplier;
 
 public class FactoryClient {
